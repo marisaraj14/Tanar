@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "377282486223",
+    "project_id": "tanar-f4544",
+    "storage_bucket": "tanar-f4544.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377282486223:android:c4fcfe514209a808d1fcba",
+        "android_client_info": {
+          "package_name": "org.tanar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377282486223-ua2ra1cut87p83bcn3r26cac6ia11aou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7XuiWdznGhH-7J3a71xdoXUqK1_ynZzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377282486223-ua2ra1cut87p83bcn3r26cac6ia11aou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
