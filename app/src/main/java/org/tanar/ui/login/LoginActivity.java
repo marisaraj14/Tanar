@@ -24,7 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.tanar.R;
-import org.tanar.ui.maps.MapsActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -42,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
-        Intent intent = new Intent(this, MapsActivity.class);
+        // Intent intent = new Intent(this, MapsActivity.class);
         loginViewModel.getLoginFormState().observe(this, loginFormState -> {
             if (loginFormState == null) {
                 return;
@@ -68,8 +67,6 @@ public class LoginActivity extends AppCompatActivity {
                 updateUiWithUser(loginResult.getSuccess());
             }
             setResult(Activity.RESULT_OK);
-
-            startActivity(intent);
 
             //Complete and destroy login activity once successful
             //finish();
@@ -109,10 +106,10 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-
+    private void updateUiWithUser(String displayName) {
+        String welcome = getString(R.string.welcome) + displayName;
+        Toast.makeText(getApplicationContext(), displayName, Toast.LENGTH_LONG).show();
+        //  startActivity(intent);
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {

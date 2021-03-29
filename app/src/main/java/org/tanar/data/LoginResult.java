@@ -1,13 +1,13 @@
-package org.tanar.ui.login;
+package org.tanar.data;
 
 import androidx.annotation.Nullable;
 
 /**
  * Authentication result : success (user details) or error message.
  */
-class LoginResult {
+public class LoginResult {
     @Nullable
-    private LoggedInUserView success;
+    private String displayName;
     @Nullable
     private Integer error;
 
@@ -15,17 +15,17 @@ class LoginResult {
         this.error = error;
     }
 
-    LoginResult(@Nullable LoggedInUserView success) {
-        this.success = success;
+    LoginResult(@Nullable String displayName) {
+        this.displayName = displayName;
     }
 
     @Nullable
-    LoggedInUserView getSuccess() {
-        return success;
+    public String getSuccess() {
+        return displayName;
     }
 
     @Nullable
-    Integer getError() {
+    public Integer getError() {
         return error;
     }
 }
